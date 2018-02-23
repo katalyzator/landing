@@ -488,15 +488,16 @@
                     чтобы выбрать лучшие
                     места по самой выгодной цене:
                 </h3>
-                <form action="https://formspree.io/rasul@googstudio.com" method="POST">
+                <form action="" method="POST" id="form-with-email">
                     <div class="uk-margin">
-                        <input class="uk-input" type="text" placeholder="Имя" name="name">
+                        <input class="uk-input" type="text" placeholder="Имя" name="name" id="form-e-name">
                     </div>
                     <div class="uk-margin">
-                        <input class="uk-input" type="email" placeholder="Электронная почта" name="email">
+                        <input class="uk-input" type="email" placeholder="Электронная почта" name="email"
+                               id="form-e-email">
                     </div>
                     <div class="uk-margin">
-                        <input class="uk-input" type="phone" placeholder="Телефон" name="phone">
+                        <input class="uk-input" type="phone" placeholder="Телефон" name="phone" id="form-e-phone">
                     </div>
                     <div class="uk-margin">
                         <button class="uk-button uk-button-default" type="submit">отправить</button>
@@ -660,12 +661,12 @@
 </div>
 <div class="uk-flex-top" id="modal-center-form" uk-modal="">
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <form action="https://formspree.io/rasul@googstudio.com" method="POST">
+        <form action="" method="POST" id="form-modal">
             <div class="uk-margin">
-                <input class="uk-input" type="name" placeholder="Имя">
+                <input class="uk-input" type="name" placeholder="Имя" name="name" id="form-name" required>
             </div>
             <div class="uk-margin">
-                <input class="uk-input" type="phone" placeholder="Телефон">
+                <input class="uk-input" type="phone" placeholder="Телефон" name="phone" id="form-phone" required>
             </div>
             <div class="uk-margin">
                 <button class="uk-button uk-button-default uk-width-1-1">Отправить</button>
@@ -676,5 +677,47 @@
 </div>
 <script src="{% static 'js/libs.min.js' %}"></script>
 <script src="{% static 'js/common.min.js' %}"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#form-modal").submit(function (event) {
+            $.ajax({
+                type: "POST",
+                url: {% url 'post_view' %},
+                data: {
+                    'name': $('#form-name').val(),
+                    'phone': $('#form-phone').val()
+                },
+                success: function () {
+                    alert('Ваше сообщение успешно отправлено!')
+                    UIkit.modal('#modal-center-form').hide();
+                }
+            });
+            return false; //<---- move it here
+        });
+
+    });
+
+    $(document).ready(function () {
+        $("#form-with-email").submit(function (event) {
+            $.ajax({
+                type: "POST",
+                url: {% url 'post_view2' %},
+                data: {
+                    'name': $('#form-e-name').val(),
+                    'phone': $('#form-e-phone').val(),
+                    'email': $('#form-e-email').val()
+                },
+                success: function () {
+                    alert('Ваше сообщение успешно отправлено!');
+                }
+            });
+            return false; //<---- move it here
+        });
+
+    });
+
+</script>
+
 </body>
 </html>
