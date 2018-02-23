@@ -6,6 +6,7 @@
     <title>Илья Кусакин</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=1366px, initial-scale=2">
     <meta name="description" content="Page description">
     <meta name="keywords" content="page, keywords">
     <meta name="theme-color" content="#000000">
@@ -73,9 +74,10 @@
 </head>
 <body>
 <div class="uk-hidden@m" style="position: fixed;right: 3%;bottom: 3%; z-index: 100;">
-    <a href="tel:0553347000" style="display: block; margin-bottom: 5px;"><img src="{% static 'img/png/pp1.png' %}"
-                                                                              alt=""></a>
-    <a href="https://api.whatsapp.com/send?phone=996553347000"><img src="{% static 'img/png/bb2.png' %}" alt=""></a>
+    <a href="https://api.whatsapp.com/send?phone=996553347000" style="display: block; margin-bottom: 5px;"><img
+            src="{% static 'img/png/pp1.png' %}"
+            alt=""></a>
+    <a href="tel:0553347000"><img src="{% static 'img/png/bb2.png' %}" alt=""></a>
 </div>
 <header class="uk-visible@l" style="z-index: 980;"
         uk-sticky="top: 200; animation: uk-animation-slide-top; bottom: #sticky-on-scroll-up">
@@ -125,7 +127,7 @@
                     </div>
                 </div>
                 <h1>Илья Кусакин</h1>
-                <h2>Директор по построения <br> в группе компаний Black Star.</h2>
+                <h2>Директор по построению <br> в группе компаний Black Star.</h2>
                 <h3>Откроет главные секреты успеха <br> Black Star burger и увеличения продаж.</h3><a
                     class="uk-button uk-button-default" href="#modal-center-form" uk-toggle="">Бесплатная
                 консультация</a>
@@ -165,7 +167,7 @@
                 <div>
                     <div><img src="{% static 'img/png/v1.png' %}" alt="">
                         <h4>Эволюция продукта</h4>
-                        <p>Эволюция продукта. Как создать продукт будущего, и навсегда отказаться от прямых продаж.</p>
+                        <p>Как создать продукт будущего, и навсегда отказаться от прямых продаж.</p>
                     </div>
                 </div>
                 <div>
@@ -225,8 +227,9 @@
                 консультация</a></div>
             <div>
                 <div class="uk-flex uk-flex-middle target-modal">
-                    <div class="play uk-flex uk-flex-middle"><img class="uk-margin-auto"
-                                                                  src="{% static 'img/png/play.png' %}" alt=""></div>
+                    <div class="play uk-flex uk-flex-middle" uk-toggle="target: #modal-center-feedback"><img
+                            class="uk-margin-auto"
+                            src="{% static 'img/png/play.png' %}" alt=""></div>
                     <span>Отзывы <br> клиентов</span>
                 </div>
             </div>
@@ -249,7 +252,7 @@
 <section class="black-star">
     <div class="uk-container">
         <div class="uk-grid uk-child-width-1-2@m" uk-grid="">
-            <div><img src="{% static 'img/jpg/br.jpg' %}" alt=""></div>
+            <div><img src="{% static 'img/jpg/bl.jpg' %}" alt=""></div>
             <div><img src="{% static 'img/jpg/br.jpg' %}" alt=""></div>
         </div>
     </div>
@@ -471,8 +474,8 @@
                     ВАШИ ИНВЕСТИЦИИ В СЕБЯ, КОТОРЫЕ
                     <br> <b>100% ВЕРНУТСЯ С ДИВИДЕНДАМИ!</b>
                 </h4>
-                <dit><a class="uk-button uk-button-default" href="#modal-center-form" uk-toggle="">записаться на
-                    семинар</a></dit>
+                <div><a class="uk-button uk-button-default" href="#modal-center-form" uk-toggle="">записаться на
+                    семинар</a></div>
             </div>
         </div>
     </div>
@@ -677,6 +680,13 @@
                 <button class="uk-button uk-button-default uk-width-1-1">Отправить</button>
             </div>
         </form>
+        <button class="uk-modal-close-default" type="button" uk-close=""></button>
+    </div>
+</div>
+<div class="uk-flex-top" id="modal-center-feedback" uk-modal="">
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-padding-remove">
+        <iframe width="100%" height="420" src="https://www.youtube.com/embed/yXqD3J26wMY"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <button class="uk-modal-close-default" type="button" uk-close=""></button>
     </div>
 </div>
