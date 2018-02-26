@@ -106,7 +106,10 @@
     <div class="uk-container">
         <div class="uk-grid" uk-grid="">
             <div class="uk-width-expand@m">
-                <div class="uk-hidden uk-margin-medium-bottom">
+                <h1>Илья Кусакин</h1>
+                <h2>Директор по построению <br> в группе компаний Black Star.</h2>
+                <h3>Откроет главные секреты успеха <br> Black Star burger и увеличения продаж.</h3>
+                 <div class="uk-margin-medium-bottom">
                     <div class="date">
                         <p class="uk-position-relative">
                             17 марта 2018 года,<br>
@@ -120,15 +123,8 @@
 
                         </p>
                     </div>
-                    <div class="call-back">
-                        <div><span uk-toggle="target: #modal-center-form">обратная связь</span></div>
-                        <div><a href="tel: (+996) 553347000 ">0553347000</a></div>
-                    </div>
                 </div>
-                <h1>Илья Кусакин</h1>
-                <h2>Директор по построению <br> в группе компаний Black Star.</h2>
-                <h3>Откроет главные секреты успеха <br> Black Star burger и увеличения продаж.</h3><a
-                    class="uk-button uk-button-default" href="#modal-center-form" uk-toggle="">Бесплатная
+                <a class="uk-button uk-button-default" href="#modal-center-form" uk-toggle="">Бесплатная
                 консультация</a>
             </div>
             <div class="uk-width-auto@m uk-text-center@s"><img src="{% static 'img/png/human2.png' %}" alt=""></div>
@@ -313,8 +309,12 @@
     </div>
 </section>
 <section class="video-bg uk-cover-container">
-    <iframe src="https://www.youtube.com/embed/mLmmAfn9PuU?autoplay=1&loop=1&playlist=mLmmAfn9PuU" width="560"
+    <iframe class="uk-visible@s" src="https://www.youtube.com/embed/mLmmAfn9PuU?autoplay=1&loop=1&playlist=mLmmAfn9PuU"
+            width="560"
             height="315" frameborder="0" allowfullscreen uk-cover=""></iframe>
+    <video class="uk-hidden@s" autoplay loop muted playsinline uk-cover>
+        <source src="{% static 'video/videoplayback.mp4' %}" type="video/mp4">
+    </video>
     <div class="uk-container">
         <div class="uk-position-relative zindex">
             <div><img src="{% static 'img/png/up.png' %}" alt=""></div>
@@ -425,25 +425,6 @@
                             </div>
                         </div>
                     </li>
-                    <li class="standart">
-                        <div class="uk-card uk-card-default uk-box-shadow-hover-large">
-                            <div class="uk-card-media-top uk-cover-container"><img src="{% static 'img/png/sl1.png' %}"
-                                                                                   alt="" uk-cover="">
-                                <canvas width="600" height="400"></canvas>
-                            </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title">STANDART</h3>
-                                <p>1 200 c</p>
-                                <div class="uk-grid uk-grid-small uk-flex-middle uk-margin-medium-top uk-child-width-1-2@m"
-                                     uk-grid="">
-                                    <div><a class="uk-button uk-button-default" href="#modal-center-form" uk-toggle="">купить
-                                        билет</a></div>
-                                    <div class="uk-text-center"><a href="#modal-center-stan" uk-toggle="">подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -480,7 +461,7 @@
     </div>
 </section>
 <section class="fb">
-    <div class="uk-container uk-text-center"><a class="uk-flex-inline uk-flex-middle" href=""><img
+    <div class="uk-container uk-text-center"><a class="uk-flex-inline uk-flex-middle" href="https://www.facebook.com/sharer/sharer.php?u=http://kusakin.sunrisestudio.pro" target="_blank"><img
             src="{% static 'img/png/fb.png' %}" alt=""><span class="uk-text-left">
             facebook<br>
             <b>поделиться</b></span></a></div>
@@ -528,12 +509,14 @@
                 </div>
                 <div class="uk-margin"><a href="mailto: Men.ishkermin2018@mail.ru">Men.ishkermin2018@mail.ru</a></div>
                 <div class="uk-margin"><a class="uk-margin-small-right" href=""><img
-                        src="{% static 'img/png/sfb.png' %}" alt=""></a><a href=""><img src="img/png/sin.png"
-                                                                                        alt=""></a></div>
+                        src="{% static 'img/png/sfb.png' %}" alt=""></a><a href=""><img
+                        src="{% static 'img/png/sin.png' %}"
+                        alt=""></a></div>
                 <div class="uk-margin"><a class="uk-button uk-button-default" href="#modal-center-form" uk-toggle="">бесплатная
                     консультация</a></div>
                 <div class="uk-margin">
                     <p>© 2010-2018 Все права защищены</p>
+                    <p><a style="text-decoration: none; color: #fff !important;" href="www.sunrisestudio.pro" target="_blank">Сделано в Sunrise Studio <img width="40" class="uk-margin-small-left" src="{% static 'img/png/sunrise_logo.png' %}" alt=""></a></p>
                 </div>
             </div>
             <div>
@@ -685,7 +668,7 @@
 <div class="uk-flex-top" id="modal-center-feedback" uk-modal="">
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-padding-remove">
         <iframe width="100%" height="420" src="https://www.youtube.com/embed/yXqD3J26wMY"
-                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <button class="uk-modal-close-default" type="button" uk-close=""></button>
     </div>
 </div>
